@@ -1,0 +1,135 @@
+/* css across all pages ----------------------------- */
+:root {
+  --text-color: #491707;
+  --nanum: 'Nanum Myeongjo', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #F6E1DC;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+header a {
+  color: var(--text-color);
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: var(--nanum);
+}
+
+p {
+  line-height: 1.6;
+}
+
+.dz-buttons {
+  min-width: 245px;
+  height: 50px;
+  text-align: center;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #D25150;
+  border: #D25150;
+  border-radius: 8px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.dz-main-links.active{
+  border-bottom: 5px solid #EDA31E;
+  font-weight: 600;
+}
+
+.dz-home-logo {
+  font-family: var(--nanum);
+  font-weight: 800;
+  flex: 33%;
+  margin-left: 50px;
+}
+
+.dz-center-nav {
+  display: flex;
+  flex: 33%;
+  justify-content: center;
+}
+
+.dz-main-links {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 50px;
+  align-items: center;
+}
+
+.dz-cart-icon {
+  flex: 33%;
+  text-align: right;
+  margin-right: 50px;
+}
+
+/* home page ---------------------------------------- */
+.dz-banner {
+  background-color: #EDA31E;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dz-main-content {
+  display: flex;
+  height: calc(100vh - 100px);
+}
+
+.dz-left-side, .dz-right-side {
+  flex: none;
+  width: 50%;
+}
+
+.dz-left-side img {
+  width: 100%;
+  object-fit: cover;
+  height: calc(100% - 2px);
+}
+
+.dz-bun-bun {
+  font-size: 6rem;
+}
+
+.dz-right-side {
+  padding-top: 120px;
+  padding-left: 90px;
+  padding-right: 50px;
+}
+
+.dz-right-side h1 {
+  margin-bottom: 70px;
+}
+
+.dz-right-side p {
+  margin-bottom: 70px;
+}
+
+/* shop page ---------------------------------------- */
+
+
+
+
+/* product details page ----------------------------- */
