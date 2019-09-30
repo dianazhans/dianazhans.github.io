@@ -36,7 +36,6 @@ class Quiz {
     isEnded() {
 	      return this.questionIndex === this.questions.length;
       }
-
 }
 
 function guess(id, guess) {
@@ -46,7 +45,6 @@ function guess(id, guess) {
    	 populate();
     }
 };
-
 
 function populate() {
 
@@ -77,12 +75,8 @@ function populate() {
         	element.innerHTML = choices[i];
         	guess("btn" + i, choices[i]);
     	}
-
 	}
 };
-
-
-
 
 function showScores() {
 	var gameOverHTML = "<h1>Result</h1>";
