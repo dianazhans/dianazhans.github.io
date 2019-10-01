@@ -1,4 +1,4 @@
-/* css across all pages ----------------------------- */
+/* global css --------------------------------------- */
 :root {
   --text-color: #491707;
   --nanum: 'Nanum Myeongjo', serif;
@@ -128,8 +128,112 @@ p {
 }
 
 /* shop page ---------------------------------------- */
+.dz-shop-grid {
+  display: grid;
+  grid-template: 1.5fr 3fr 3fr 0.5fr / repeat(5, 1fr);
+  height: auto;
+  width: 100%;
+  height: 100%;
+  grid-column-gap: 10px;
+}
 
+.dz-shop-title {
+  grid-column: 1 / span 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
+.dz-left-empty-space {
+  grid-row: 2 / span 2;
+}
 
+.dz-right-empty-space {
+  grid-column: 5 / span 1;
+  grid-row: 2 /span 2;
+}
+
+.dz-bottom-empty-space {
+  grid-row: 4 / span 1;
+  grid-column: 1 / span 5;
+}
+
+.dz-item-name {
+  font-family: var(--nanum);
+  color: #D25150;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.dz-item-price {
+  margin-bottom: 40px;
+}
+
+.dz-item a {
+  display: inline-block;
+}
 
 /* product details page ----------------------------- */
+.dz-subheader {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.dz-subheader a {
+  font-family: "Open Sans", sans-serif;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.dz-back-caret-icon {
+  margin-right: 10px;
+}
+
+.dz-details-content {
+  display: flex;
+}
+
+.dz-details-left-side, .dz-details.right-side {
+  width: 50%;
+}
+
+.dz-details-left-side {
+  margin-top: 20px;
+}
+
+.dz-product-details-image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.dz-tabs {
+  display: flex;
+  height: 50px;
+  margin-left: 113px;
+}
+
+.dz-tab-links {
+  border: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.dz-tab-links.active {
+  border-bottom: 5px solid #EDA31E;
+  font-weight: 600;
+}
+
+.dz-tab-content {
+  display: flex;
+  justify-content: center;
+}
