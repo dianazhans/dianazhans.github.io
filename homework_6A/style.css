@@ -345,3 +345,59 @@ p {
   border-radius: 50%;
   background: white;
 }
+
+/* shopping-cart page ----------------------------- */
+.dz-cart-header {
+  display: flex;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.dz-title-item-number, .dz-subtotal-button {
+  display: flex;
+  flex: 50%;
+  align-items: center;
+}
+.dz-title-item-number p {
+  font-family: var(--nanum);
+  font-size: 3rem;
+  font-weight: 800;
+  margin-left: 10px;
+}
+
+.dz-subtotal-button {
+  justify-content: flex-end;
+}
+
+.dz-subtotal-button p {
+  margin-right: 10px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.dz-cart-item {
+  display: flex;
+  margin-left: 100px;
+  margin-right: 100px;
+  justify-content: space-between;
+  border: solid 1px;
+  border-radius: 8px;
+  padding: 30px;
+  align-items: center;
+}
+
+.dz-item-flavor {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.dz-item-glaze {
+  margin-bottom: 30px;
+}
+
+.dz-item-subtotal p {
+  font-size: 1.5rem;
+}

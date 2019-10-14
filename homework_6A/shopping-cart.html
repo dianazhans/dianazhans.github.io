@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shopping Cart</title>
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,800|Open+Sans:400,600&display=swap" rel="stylesheet">
+    <!-- style sheets -->
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <header>
+      <a class="dz-home-logo" href="index.html">Bun Bun Bake Shop</a>
+      <div class="dz-center-nav">
+        <a class="dz-main-links" href="shop.html">Shop</a>
+        <a class="dz-main-links">About</a>
+        <a class="dz-main-links">Contact</a>
+      </div>
+      <a class="dz-cart-icon"><img src="images/cart-icon.svg"></a>
+    </header>
+    <div class="dz-cart-header">
+      <div class="dz-title-item-number">
+        <h1>Shopping Cart</h1>
+        <p>(1)</p>
+      </div>
+      <div class="dz-subtotal-button">
+        <p>Subtotal: $24.00</p>
+        <button class="dz-buttons">Proceed to Checkout</button>
+      </div>
+    </div>
+    <div class="dz-items-section">
+      <div class="dz-cart-item">
+        <div class="dz-item-image"><img src="images/2-blackberry.png"></div>
+        <div class="dz-item-info">
+          <p class="dz-item-flavor">Blackberry<p>
+          <p class="dz-item-glaze">Double-chocolate glaze</p>
+          <p class="dz-item-price">$2.00 each</p>
+        </div>
+        <div class="dz-number-rolls-options">
+          <p>Number of rolls</p>
+          <select class="dz-drop-down">
+            <option></option>
+            <option value="1">1</option>
+            <option value="3">3</option>
+            <option value="6">6</option>
+            <option value="12" selected>12</option>
+          </select>
+        </div>
+        <div class="dz-item-subtotal">
+          <p>$24.00</p>
+        </div>
+        <div class="dz-item-remove">
+          <img src="images/close-icon.svg">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
