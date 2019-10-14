@@ -83,6 +83,8 @@ p {
   flex: 33%;
   text-align: right;
   margin-right: 50px;
+  display: flex;/*added for cart-number*/
+  justify-content: flex-end; /*added for cart-number*/
 }
 
 /* home page ---------------------------------------- */
@@ -400,4 +402,15 @@ p {
 
 .dz-item-subtotal p {
   font-size: 1.5rem;
+}
+
+.dz-cart-number {
+  width: 25px;
+  height: 25px;
+  color: #ffffff;
+  background-color: #EDA31E;
+  border-radius: 50%;
+  margin-right: 5px;
+  text-align: center;
+  font-weight: 600;
 }
