@@ -2,11 +2,14 @@
 <html>
   <head>
     <title>Blackberry Roll</title>
+    <meta charset="utf-8">
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo:400,800|Open+Sans:400,600&display=swap" rel="stylesheet">
     <!-- style sheets -->
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- javascript -->
+    <script src="main.js" type="text/javascript" async></script>
   </head>
   <body>
     <header>
@@ -38,8 +41,8 @@
       </div>
       <div class="dz-details-right-side">
         <div class="dz-roll-title">
-          <h1 class="dz-roll-flavor">Blackberry</h1>
-          <p class="dz-roll-price">$2.00 each</p>
+          <h1 class="dz-roll-flavor" id="rollTitle">{{#rollTitle}}</h1>
+          <p class="dz-roll-price">$<span id="rollPrice">{{#rollPrice}}</span>.00 each</p>
         </div>
         <div class="dz-number-rolls-options">
           <p>How many rolls would you like to order?</p>

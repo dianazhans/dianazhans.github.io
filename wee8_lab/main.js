@@ -1,4 +1,4 @@
-function Elephant(name, age) {
+ function Elephant(name, age) {
   this.name = name;
   this.age = age;
   this.image = "elephant.png";
