@@ -19,7 +19,12 @@
         <a class="dz-main-links">About</a>
         <a class="dz-main-links">Contact</a>
       </div>
-      <a class="dz-cart-icon"><img src="images/cart-icon.svg"></a>
+      <a class="dz-cart-icon">
+        <div class="dz-cart-number" id="cart-item-number-display" style="display: none;">
+          <p id="cart-item-number">1</p>
+        </div>
+        <img src="images/cart-icon.svg">
+      </a>
     </header>
     <div class="dz-subheader">
       <a href="shop.html"><img src="images/back-caret-icon.svg" class="dz-back-caret-icon">Back to Flavors</a>
@@ -74,7 +79,7 @@
             <span class="dz-radio-button"></span>
           </label>
         </div>
-        <button class="dz-buttons">Add to Cart</button>
+        <button class="dz-buttons" id="add-to-cart" onClick="updateCartItemNumber()">Add to Cart</button>
       </div>
     </div>
   </body>
