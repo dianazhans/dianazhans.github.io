@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="17px" viewBox="0 0 10 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Back Caret Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Product-Details-" transform="translate(-52.000000, -66.000000)" fill="#491707" fill-rule="nonzero">
+            <g id="Back-Caret-Icon" transform="translate(52.000000, 66.000000)">
+                <path d="M7.99230769,16.4575 C8.39306816,16.8482415 9.04282927,16.8482415 9.44358974,16.4575 C9.84435022,16.0667585 9.84435022,15.4332415 9.44358974,15.0425 L2.73333333,8.5 L9.44358974,1.9575 C9.70283631,1.7047346 9.80408362,1.33632099 9.70919279,0.991037027 C9.61430196,0.645753063 9.33768917,0.376055586 8.98355177,0.283537027 C8.62941437,0.191018467 8.25155426,0.289734595 7.99230769,0.5425 L0.556410256,7.7925 C0.363818417,7.98006826 0.255603429,8.23459075 0.255603429,8.5 C0.255603429,8.76540925 0.363818417,9.01993174 0.556410256,9.2075 L7.99230769,16.4575 Z" id="Path"></path>
+            </g>
+        </g>
+    </g>
+</svg>
