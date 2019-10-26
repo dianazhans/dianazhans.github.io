@@ -11,7 +11,7 @@
     <!-- javascript -->
     <script src="main.js" type="text/javascript" async></script>
   </head>
-  <body>
+  <body onload="loadCartInHeader(), loadCartTitleItemNumber(), loadCart()">
     <header>
       <a class="dz-home-logo" href="index.html">Bun Bun Bake Shop</a>
       <div class="dz-center-nav">
@@ -38,15 +38,15 @@
     </div>
     <div class="dz-items-section">
       <div class="dz-cart-item">
-        <div class="dz-item-image"><img src="images/2-blackberry.png"></div>
+        <div class="dz-item-image"><img id="cartRollImage" src="images/2-blackberry.png"></div>
         <div class="dz-item-info">
-          <p class="dz-item-flavor">Blackberry</p>
-          <p class="dz-item-glaze">Double-chocolate glaze</p>
-          <p class="dz-item-price">$2.00 each</p>
+          <p class="dz-item-flavor" id="rollName">{{#rollName}}</p>
+          <p class="dz-item-glaze" id="rollGlaze">{{#rollGlaze}}</p>
+          <p class="dz-item-price">$<span id="rollPrice">{{#rollPrice}}</span>.00 each</p>
         </div>
         <div class="dz-number-rolls-options">
           <p>Number of rolls</p>
-          <select class="dz-drop-down">
+          <select class="dz-drop-down" id="select-number-of-rolls">
             <option></option>
             <option value="1">1</option>
             <option value="3">3</option>

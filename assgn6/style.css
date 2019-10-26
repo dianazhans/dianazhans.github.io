@@ -270,7 +270,7 @@ p {
 
 .dz-drop-down {
   height: 50px;
-  width: 100px;
+  min-width: 100px;
   color: var(--text-color);
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
@@ -281,7 +281,7 @@ p {
   margin-bottom: 40px;
 }
 
-.dz-number-rolls-options p {
+.dz-select-options p {
   margin-bottom: 10px;
 }
 
@@ -293,59 +293,6 @@ p {
   font-style: italic;
   font-size: 14px;
   margin-bottom: 15px;
-}
-
-/* custom radio buttons ----------------------------- */
-.dz-container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 20px;
-  cursor: pointer;
-  font-size: 18px;
-}
-
-.dz-container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.dz-radio-button {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #F6E1DC;
-  border-radius: 50%;
-}
-
-.dz-container:hover input ~ .dz-radio-button {
-  background-color: #E6E6E6;
-}
-
-.dz-container input:checked ~ .dz-radio-button {
-  background-color: #491707;
-}
-
-.dz-radio-button:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.dz-container input:checked ~ .dz-radio-button:after {
-  display: block;
-}
-
-.dz-container .dz-radio-button:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white;
 }
 
 /* shopping-cart page ----------------------------- */
@@ -391,7 +338,7 @@ p {
 }
 
 .dz-item-flavor {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 10px;
 }
