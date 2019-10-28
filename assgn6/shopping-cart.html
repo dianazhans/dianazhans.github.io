@@ -11,7 +11,7 @@
     <!-- javascript -->
     <script src="main.js" type="text/javascript" async></script>
   </head>
-  <body onload="loadCartInHeader(), loadCartTitleItemNumber(), loadCart()">
+  <body onload="loadCartInHeader(), loadCartTitleItemNumber(), loadCart(), cloneItems()">
     <header>
       <a class="dz-home-logo" href="index.html">Bun Bun Bake Shop</a>
       <div class="dz-center-nav">
@@ -36,8 +36,8 @@
         <button class="dz-buttons">Proceed to Checkout</button>
       </div>
     </div>
-    <div class="dz-items-section">
-      <div class="dz-cart-item">
+    <div class="dz-items-section" id="items-list">
+      <div class="dz-cart-item" id="cart-item">
         <div class="dz-item-image"><img id="cartRollImage" src="images/2-blackberry.png"></div>
         <div class="dz-item-info">
           <p class="dz-item-flavor" id="rollName">{{#rollName}}</p>

@@ -330,6 +330,7 @@ p {
   display: flex;
   margin-left: 100px;
   margin-right: 100px;
+  margin-bottom: 25px;
   justify-content: space-between;
   border: solid 1px;
   border-radius: 8px;

@@ -62,6 +62,7 @@ function addToCart() {
 
 //ASSIGNMENT 6B//
 
+//only loads hard coded item//
 function loadCart() {
   document.getElementById("cartRollImage").src = localStorage.getItem("cartRollImage");
   document.getElementById("rollName").innerHTML = localStorage.getItem("rollName");
@@ -70,6 +71,7 @@ function loadCart() {
   document.getElementById("select-number-of-rolls").value = localStorage.getItem("rollNumber");
 }
 
+//constructor for product (cart item)//
 function Product(rollName, rollGlaze, rollPrice, cartRollImage, rollNumber) {
   this.rollName = rollName;
   this.rollGlaze = rollGlaze;
@@ -78,19 +80,29 @@ function Product(rollName, rollGlaze, rollPrice, cartRollImage, rollNumber) {
   this.rollNumber = rollNumber;
 }
 
-// console.log(new Product (rollName, rollGlaze, rollPrice, cartRollImage, localStorage.getItem("rollNumber")));
-
-function test() {
+//creates an array and adds all items to that array, stores it locally//
+function createProductsArray() {
   let products = [];
   var rollName = localStorage.getItem("rollName");
   var rollGlaze = localStorage.getItem("rollGlaze");
   var rollPrice = localStorage.getItem("rollPrice");
   var cartRollImage = localStorage.getItem("cartRollImage");
   var rollNumber = localStorage.getItem("rollNumber");
+  if (localStorage.getItem("products")) {
+    products = JSON.parse(localStorage.getItem("products"));
+  }
   products.push(new Product(rollName, rollGlaze, rollPrice, cartRollImage, rollNumber));
-  console.log(products);
   localStorage.setItem("products", JSON.stringify(products));
-  console.log("saved to localStorage");
+}
+
+//creates a clone of each cart item//
+function cloneItems() {
+  var newItem = document.createElement("div");
+  newItem.id = "cart-item";
+  newItem.className = "dz-cart-item";
+  var template = document.getElementById("cart-item");
+  newItem.innerHTML = template.innerHTML;
+  document.getElementsByTagName("body")[0].appendChild(newItem);
 }
 
 
