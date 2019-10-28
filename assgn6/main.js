@@ -70,6 +70,31 @@ function loadCart() {
   document.getElementById("select-number-of-rolls").value = localStorage.getItem("rollNumber");
 }
 
+function Product(rollName, rollGlaze, rollPrice, cartRollImage, rollNumber) {
+  this.rollName = rollName;
+  this.rollGlaze = rollGlaze;
+  this.rollPrice = rollPrice;
+  this.cartRollImage = cartRollImage;
+  this.rollNumber = rollNumber;
+}
+
+// console.log(new Product (rollName, rollGlaze, rollPrice, cartRollImage, localStorage.getItem("rollNumber")));
+
+function test() {
+  let products = [];
+  var rollName = localStorage.getItem("rollName");
+  var rollGlaze = localStorage.getItem("rollGlaze");
+  var rollPrice = localStorage.getItem("rollPrice");
+  var cartRollImage = localStorage.getItem("cartRollImage");
+  var rollNumber = localStorage.getItem("rollNumber");
+  products.push(new Product(rollName, rollGlaze, rollPrice, cartRollImage, rollNumber));
+  console.log(products);
+  localStorage.setItem("products", JSON.stringify(products));
+  console.log("saved to localStorage");
+}
+
+
+
 //PROCESS//
 //create an empty array for populating products//
 //create a constructor for each item//
