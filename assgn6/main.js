@@ -148,13 +148,12 @@ function removeCartItem(e) {
 
   //remove item from locally stored array//
   var products = JSON.parse(localStorage.getItem("products"));
-  console.log(products);
   var productIndex = parent.getAttribute("data-index");
   var intProductIndex = parseInt(productIndex);
-  // console.log(intProductIndex);
+  console.log(intProductIndex);
   console.log(productIndex);
   console.log(products[productIndex]);
-  products.splice(index, [productIndex]);
+  products.splice(intProductIndex,1);
   // localStorage.removeItem(products[intProductIndex]);
 
   localStorage.setItem("products", JSON.stringify(products));
