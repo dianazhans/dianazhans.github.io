@@ -85,15 +85,15 @@ function createProductsArray() {
   localStorage.setItem("products", JSON.stringify(products));
 }
 
-//retrieves array from local storage//
-var products = JSON.parse(localStorage.getItem("products"));
-var productsLength = products.length;
-
-//converts the subtotal to an integer//
-var subtotal = document.getElementById("subtotal-number").innerHTML;
-var intSubtotal = parseInt(subtotal);
-
 function loadCartItems() {
+  //retrieves array from local storage//
+  var products = JSON.parse(localStorage.getItem("products"));
+  var productsLength = products.length;
+
+  //converts the subtotal to an integer//
+  var subtotal = document.getElementById("subtotal-number").innerHTML;
+  var intSubtotal = parseInt(subtotal);
+
   //for loop to access each item in array//
   for (var i = 0; i < productsLength; i++) {
 
@@ -125,6 +125,29 @@ function loadCartItems() {
     document.getElementsByTagName("body")[0].appendChild(newItem);
     }
   }
+
+function removeCartItem(e) {
+  //removes the cart item//
+  e.target.parentNode.parentNode.remove();
+  // localStorage.removeItem(e.target.parentNode.parentNode);
+
+  //updates the item number//
+  newItemNumber = localStorage.getItem("currentItems");
+  newItemNumber--;
+  localStorage.setItem("currentItems", newItemNumber);
+  document.getElementById("cart-item-number").innerHTML = localStorage.getItem("currentItems");
+  document.getElementById("cartTitleItemNumber").innerHTML = localStorage.getItem("currentItems");
+
+  //updates subtotal//
+  var parent = e.target.parentNode.parentNode;
+  var targetItemSubtotal = parent.getElementsByClassName("dz-item-subtotal-number")[0].innerHTML;
+  var subtotal = document.getElementById("subtotal-number").innerHTML;
+  var newSubtotal = subtotal - targetItemSubtotal;
+  document.getElementById("subtotal-number").innerHTML = newSubtotal;
+
+  //remove item from locally stored array//
+  
+}
 
 //To remove items//
 //delete target child upon clicking of the X - similar to midterm question//
