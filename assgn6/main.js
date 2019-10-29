@@ -6,8 +6,9 @@ function loadCartInHeader(){
   }
 };
 
-function loadCartTitleItemNumber() {
+function loadCartItemNumberAndSubtotal() {
   document.getElementById("cartTitleItemNumber").innerHTML = localStorage.getItem("currentItems");
+  document.getElementById("cart-subtotal").style.display = "inline-block";
 }
 
 //loads the information on Product Details page//
@@ -60,17 +61,6 @@ function addToCart() {
   localStorage.setItem("rollGlaze", rollGlaze);
 }
 
-//ASSIGNMENT 6B//
-
-//only loads hard coded item//
-function loadCart() {
-  document.getElementById("cartRollImage").src = localStorage.getItem("cartRollImage");
-  document.getElementById("rollName").innerHTML = localStorage.getItem("rollName");
-  document.getElementById("rollPrice").innerHTML = localStorage.getItem("rollPrice");
-  document.getElementById("rollGlaze").innerHTML = localStorage.getItem("rollGlaze");
-  document.getElementById("select-number-of-rolls").value = localStorage.getItem("rollNumber");
-}
-
 //constructor for product (cart item)//
 function Product(rollName, rollGlaze, rollPrice, cartRollImage, rollNumber) {
   this.rollName = rollName;
@@ -95,30 +85,46 @@ function createProductsArray() {
   localStorage.setItem("products", JSON.stringify(products));
 }
 
-//creates a clone of each cart item//
-function cloneItems() {
-  var newItem = document.createElement("div");
-  newItem.id = "cart-item";
-  newItem.className = "dz-cart-item";
-  var template = document.getElementById("cart-item");
-  newItem.innerHTML = template.innerHTML;
-  document.getElementsByTagName("body")[0].appendChild(newItem);
-}
+//retrieves array from local storage//
+var products = JSON.parse(localStorage.getItem("products"));
+var productsLength = products.length;
 
+//converts the subtotal to an integer//
+var subtotal = document.getElementById("subtotal-number").innerHTML;
+var intSubtotal = parseInt(subtotal);
 
+function loadCartItems() {
+  //for loop to access each item in array//
+  for (var i = 0; i < productsLength; i++) {
 
-//PROCESS//
-//create an empty array for populating products//
-//create a constructor for each item//
-//upon add to cart, create an object of that constructor//
-//add that object to the array using push//
-//stringify the array//
-//on load of the shopping cart page, parse the array//
-//write a for loop to go through that array//
-//for each item in the array create a new child and populate the right info//
-//multiply number of rolls by price and add to the subtotal//
-//append that new child and continue with the array//
+    //creates copy of cart item//
+    var newItem = document.createElement("div");
+    newItem.id = "cart-item" + i;
+    newItem.className = "dz-cart-item";
+    var template = document.getElementById("cart-item");
+    newItem.innerHTML = template.innerHTML;
 
+    //populates data for each cart item//
+    newItem.getElementsByClassName("dz-item-flavor")[0].innerHTML = products[i].rollName;
+    newItem.getElementsByClassName("dz-item-glaze")[0].innerHTML = products[i].rollGlaze;
+    newItem.getElementsByClassName("dz-item-price")[0].innerHTML = products[i].rollPrice;
+    newItem.getElementsByClassName("dz-drop-down")[0].value = products[i].rollNumber;
+    newItem.getElementsByClassName("dz-item-image")[0].src = products[i].cartRollImage;
+
+    //updates the subtotal of each item//
+    var intRollNumber = parseInt(products[i].rollNumber);
+    var intRollPrice = parseInt(products[i].rollPrice);
+    var itemSubtotal = intRollNumber * intRollPrice;
+    newItem.getElementsByClassName("dz-item-subtotal-number")[0].innerHTML = itemSubtotal;
+
+    //updates the subtotal//
+    intSubtotal = intSubtotal + itemSubtotal;
+    document.getElementById("subtotal-number").innerHTML = intSubtotal;
+
+    //appends new cart item to body//
+    document.getElementsByTagName("body")[0].appendChild(newItem);
+    }
+  }
 
 //To remove items//
 //delete target child upon clicking of the X - similar to midterm question//

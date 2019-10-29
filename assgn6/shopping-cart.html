@@ -11,7 +11,7 @@
     <!-- javascript -->
     <script src="main.js" type="text/javascript" async></script>
   </head>
-  <body onload="loadCartInHeader(), loadCartTitleItemNumber(), loadCart(), cloneItems()">
+  <body onload="loadCartInHeader(), loadCartItemNumberAndSubtotal(), loadCartItems()">
     <header>
       <a class="dz-home-logo" href="index.html">Bun Bun Bake Shop</a>
       <div class="dz-center-nav">
@@ -32,17 +32,17 @@
         <p>(<span id="cartTitleItemNumber">{{Number of Items}}</span>)</p>
       </div>
       <div class="dz-subtotal-button">
-        <p>Subtotal: $24.00</p>
+        <p id="cart-subtotal" style="display: none;">Subtotal: $<span id="subtotal-number">0</span>.00</p>
         <button class="dz-buttons">Proceed to Checkout</button>
       </div>
     </div>
     <div class="dz-items-section" id="items-list">
-      <div class="dz-cart-item" id="cart-item">
-        <div class="dz-item-image"><img id="cartRollImage" src="images/2-blackberry.png"></div>
+      <div class="dz-cart-item" id="cart-item" style="display: none;">
+        <div><img class="dz-item-image" id="cartRollImage" src="images/2-blackberry.png"></div>
         <div class="dz-item-info">
           <p class="dz-item-flavor" id="rollName">{{#rollName}}</p>
           <p class="dz-item-glaze" id="rollGlaze">{{#rollGlaze}}</p>
-          <p class="dz-item-price">$<span id="rollPrice">{{#rollPrice}}</span>.00 each</p>
+          <p>$<span class="dz-item-price" id="rollPrice">{{#rollPrice}}</span>.00 each</p>
         </div>
         <div class="dz-number-rolls-options">
           <p>Number of rolls</p>
@@ -55,7 +55,7 @@
           </select>
         </div>
         <div class="dz-item-subtotal">
-          <p>$24.00</p>
+          <p>$<span class="dz-item-subtotal-number">{{item subtotal}}</span>.00</p>
         </div>
         <div class="dz-item-remove">
           <img src="images/close-icon.svg">
