@@ -101,6 +101,7 @@ function loadCartItems() {
     var newItem = document.createElement("div");
     newItem.id = "cart-item" + i;
     newItem.className = "dz-cart-item";
+    newItem.setAttribute("data-index", i);
     var template = document.getElementById("cart-item");
     newItem.innerHTML = template.innerHTML;
 
@@ -146,7 +147,17 @@ function removeCartItem(e) {
   document.getElementById("subtotal-number").innerHTML = newSubtotal;
 
   //remove item from locally stored array//
-  
+  var products = JSON.parse(localStorage.getItem("products"));
+  console.log(products);
+  var productIndex = parent.getAttribute("data-index");
+  var intProductIndex = parseInt(productIndex);
+  // console.log(intProductIndex);
+  console.log(productIndex);
+  console.log(products[productIndex]);
+  products.splice(index, [productIndex]);
+  // localStorage.removeItem(products[intProductIndex]);
+
+  localStorage.setItem("products", JSON.stringify(products));
 }
 
 //To remove items//
