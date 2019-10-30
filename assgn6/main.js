@@ -6,6 +6,7 @@ function loadCartInHeader(){
   }
 };
 
+//load subtotal and item number in shopping cart//
 function loadCartItemNumberAndSubtotal() {
   document.getElementById("cartTitleItemNumber").innerHTML = localStorage.getItem("currentItems");
   document.getElementById("cart-subtotal").style.display = "inline-block";
@@ -98,34 +99,33 @@ function loadCartItems() {
 
   //for loop to access each item in array//
   for (var i = 0; i < productsLength; i++) {
+      //creates copy of cart item//
+      var newItem = document.createElement("div");
+      newItem.id = "cart-item" + i;
+      newItem.className = "dz-cart-item";
+      newItem.setAttribute("data-index", i);
+      var template = document.getElementById("cart-item");
+      newItem.innerHTML = template.innerHTML;
 
-    //creates copy of cart item//
-    var newItem = document.createElement("div");
-    newItem.id = "cart-item" + i;
-    newItem.className = "dz-cart-item";
-    newItem.setAttribute("data-index", i);
-    var template = document.getElementById("cart-item");
-    newItem.innerHTML = template.innerHTML;
+      //populates data for each cart item//
+      newItem.getElementsByClassName("dz-item-flavor")[0].innerHTML = products[i].rollName;
+      newItem.getElementsByClassName("dz-item-glaze")[0].innerHTML = products[i].rollGlaze;
+      newItem.getElementsByClassName("dz-item-price")[0].innerHTML = products[i].rollPrice;
+      newItem.getElementsByClassName("dz-roll-number")[0].innerHTML = products[i].rollNumber;
+      newItem.getElementsByClassName("dz-item-image")[0].src = products[i].cartRollImage;
 
-    //populates data for each cart item//
-    newItem.getElementsByClassName("dz-item-flavor")[0].innerHTML = products[i].rollName;
-    newItem.getElementsByClassName("dz-item-glaze")[0].innerHTML = products[i].rollGlaze;
-    newItem.getElementsByClassName("dz-item-price")[0].innerHTML = products[i].rollPrice;
-    newItem.getElementsByClassName("dz-drop-down")[0].value = products[i].rollNumber;
-    newItem.getElementsByClassName("dz-item-image")[0].src = products[i].cartRollImage;
+      //updates the subtotal of each item//
+      var intRollNumber = parseInt(products[i].rollNumber);
+      var intRollPrice = parseInt(products[i].rollPrice);
+      var itemSubtotal = intRollNumber * intRollPrice;
+      newItem.getElementsByClassName("dz-item-subtotal-number")[0].innerHTML = itemSubtotal;
 
-    //updates the subtotal of each item//
-    var intRollNumber = parseInt(products[i].rollNumber);
-    var intRollPrice = parseInt(products[i].rollPrice);
-    var itemSubtotal = intRollNumber * intRollPrice;
-    newItem.getElementsByClassName("dz-item-subtotal-number")[0].innerHTML = itemSubtotal;
+      //updates the subtotal//
+      intSubtotal = intSubtotal + itemSubtotal;
+      document.getElementById("subtotal-number").innerHTML = intSubtotal;
 
-    //updates the subtotal//
-    intSubtotal = intSubtotal + itemSubtotal;
-    document.getElementById("subtotal-number").innerHTML = intSubtotal;
-
-    //appends new cart item to body//
-    document.getElementsByTagName("body")[0].appendChild(newItem);
+      //appends new cart item to body//
+      document.getElementsByTagName("body")[0].appendChild(newItem);
     }
   }
 
@@ -163,32 +163,13 @@ function removeCartItem(e) {
   localStorage.setItem("products", JSON.stringify(products));
 }
 
-function test() {
+//enabled Add To Cart button only after quantity and glaze are selected//
+function enableButton() {
   var dropDownNumber = document.getElementById("select-number-of-rolls").value;
   var dropDownGlaze = document.getElementById("select-glaze").value;
-  console.log(!dropDownNumber && !dropDownGlaze);
-  if (!dropDownNumber && !dropDownGlaze) {
+  if (dropDownNumber && dropDownGlaze) {
     document.getElementById("add-to-cart").disabled = false;
   } else {
     document.getElementById("add-to-cart").disabled = true;
   }
 }
-
-
-// function enableButton() {
-//   var dropDownNumber = document.getElementById("select-number-of-rolls");
-//   var dropDownGlaze = document.getElementById("select-glaze");
-//   // var dropDown = document.getElementsByClassName('dz-drop-down');
-//   var button = document.getElementById('add-to-cart');
-//   button.disabled = (!dropDownNumber.value && !dropDownGlaze.value);
-// }
-//
-// function enableButtonGlaze() {
-//   var dropDownNumber = document.getElementById("select-glaze");
-//   // var dropDown = document.getElementsByClassName('dz-drop-down');
-//   var button = document.getElementById('add-to-cart');
-//   button.disabled = !dropDown.value;
-// }
-
-//To remove items//
-//delete target child upon clicking of the X - similar to midterm question//

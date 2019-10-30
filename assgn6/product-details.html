@@ -50,8 +50,8 @@
           <p class="dz-roll-price">$<span id="rollPrice">{{#rollPrice}}</span>.00 each</p>
         </div>
         <div class="dz-select-options">
-          <p>How many rolls would you like to order?</p>
-          <select class="dz-drop-down" id="select-number-of-rolls" onchange="test()">
+          <p>* How many rolls would you like to order?</p>
+          <select class="dz-drop-down" id="select-number-of-rolls" onchange="enableButton()">
             <option></option>
             <option value="1">1</option>
             <option value="3">3</option>
@@ -60,8 +60,8 @@
           </select>
         </div>
         <div class="dz-select-options">
-          <p>What type of glaze would you like?</p>
-          <select required class="dz-drop-down" id="select-glaze" onchange="test()">
+          <p>* What type of glaze would you like?</p>
+          <select required class="dz-drop-down" id="select-glaze" onchange="enableButton()">
             <option></option>
             <option value="None">None</option>
             <option value="Sugar-milk">Sugar-milk</option>

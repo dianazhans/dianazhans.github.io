@@ -43,16 +43,7 @@
           <p class="dz-item-flavor" id="rollName">{{#rollName}}</p>
           <p class="dz-item-glaze" id="rollGlaze">{{#rollGlaze}}</p>
           <p>$<span class="dz-item-price" id="rollPrice">{{#rollPrice}}</span>.00 each</p>
-        </div>
-        <div class="dz-number-rolls-options">
-          <p>Number of rolls</p>
-          <select class="dz-drop-down" id="select-number-of-rolls">
-            <option></option>
-            <option value="1">1</option>
-            <option value="3">3</option>
-            <option value="6">6</option>
-            <option value="12" selected>12</option>
-          </select>
+          <p>Number of rolls: <span class="dz-roll-number" id="select-number-of-rolls">{{number of rolls}}</span></p>
         </div>
         <div class="dz-item-subtotal">
           <p>$<span class="dz-item-subtotal-number">{{item subtotal}}</span>.00</p>
