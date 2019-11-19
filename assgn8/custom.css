@@ -1,0 +1,80 @@
+/*hero background*/
+/* styles
+  text-color: #ECEDF2;
+  accent-color: #C85658;
+  roboto-condensed: 'Roboto Condensed', serif;
+  roboto: 'Roboto', serif;
+  dark-blue: #151625;
+  light-blue: #2D2E47;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+/* html {
+  font-family:'Roboto', serif;;
+  color: #ECEDF2;
+  font-weight: 400;
+} */
+
+h1 {
+  font-family: 'Roboto Condensed', serif;
+  font-size: 7rem;
+  font-weight: 700;
+  color: #ECEDF2;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-family: 'Roboto', serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #ECEDF2;
+}
+
+h3 {
+  font-family: 'Roboto Condensed', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ECEDF2;
+  margin-bottom:30px;
+  margin-top: 30px;
+}
+
+p {
+  font-family:'Roboto', serif;;
+  color: #ECEDF2;
+  font-weight: 400;
+}
+
+.hero-background {
+  background-color: #2D2E47;
+  height: calc(100vh);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#scroll-icon {
+  position: absolute;
+  margin-top: 300px;
+}
+
+.info {
+  background-color: #151625;
+  padding-top: 50px;
+}
+
+.info-container {
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: #2D2E47;
+  padding: 40px;
+}
+
+#what-is-image {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
