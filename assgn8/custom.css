@@ -14,7 +14,7 @@
 
 h1 {
   font-family: 'Roboto Condensed', serif;
-  font-size: 7rem;
+  font-size: 10rem;
   font-weight: 700;
   color: #ECEDF2;
   margin-bottom: 10px;
@@ -22,14 +22,14 @@ h1 {
 
 h2 {
   font-family: 'Roboto', serif;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 300;
   color: #ECEDF2;
 }
 
 h3 {
   font-family: 'Roboto Condensed', serif;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #ECEDF2;
   margin-bottom:30px;
@@ -39,7 +39,9 @@ h3 {
 p {
   font-family:'Roboto', serif;;
   color: #ECEDF2;
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .hero-background {
@@ -62,16 +64,23 @@ p {
 .info {
   background-color: #151625;
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .info-container {
   margin-left: 100px;
   margin-right: 100px;
   background-color: #2D2E47;
-  padding: 40px;
+  padding: 50px;
 }
 
 #what-is-image {
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+.what-is-line {
+  margin-top: 100px;
+  height: 10px;
+  background-color: #C85658;
 }
