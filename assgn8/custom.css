@@ -159,6 +159,104 @@ p {
 }
 
 /* benefits-of-hiit */
+.dz-benefits {
+  background-color: var(--dark-blue);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.dz-benefits-line {
+  margin-top: 72px;
+  height: 10px;
+  width: 112px;
+  position: absolute;
+  z-index: 2;
+  background-color: var(--accent-color);
+}
+
+.dz-benefits-container {
+  margin-left: 80px;
+  margin-right: 80px;
+  background-color: var(--light-blue);
+  padding: 50px;
+  flex-wrap: wrap;
+}
+
+#benefits-header {
+  margin-bottom: 30px;
+}
+
+.dz-benefits-numbers {
+  font-weight: 400;
+  font-size: 2rem;
+  margin-right: 20px;
+}
+
+.dz-benefits-title {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+  #benefits-1-image {
+    display: none;
+  }
+  #benefits-2-image {
+    display: none;
+  }
+}
+
+/* benefits-1 */
+#benefits-1-image {
+  object-fit: cover;
+  margin-right: 50px;
+}
+
+.dz-benefits-info-1 {
+  flex: 50%;
+}
+
+.dz-benefits-details-1 {
+  margin-left: 20px;
+}
+
+.dz-benefits-info-1 p {
+  margin-bottom: 50px;
+}
+
+/* benefits-2 */
+.dz-benefits-2 {
+  margin-top: 50px;
+}
+
+#benefits-2-image {
+  flex: 50%;
+  object-fit: cover;
+}
+
+.dz-benefits-info-2 {
+  flex: 50%;
+}
+
+.dz-benefits-info-2 p {
+  margin-bottom: 50px;
+  margin-right: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* utility */
