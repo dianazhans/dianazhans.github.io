@@ -1,50 +1,58 @@
 /*hero background*/
-/* styles
-  text-color: #ECEDF2;
-  accent-color: #C85658;
-  roboto-condensed: 'Roboto Condensed', serif;
-  roboto: 'Roboto', serif;
-  dark-blue: #151625;
-  light-blue: #2D2E47;
-} */
+:root {
+  --text-color: #ECEDF2;
+  --accent-color: #C85658;
+  --roboto-condensed: 'Roboto Condensed', serif;
+  --roboto: 'Roboto', serif;
+  --dark-blue: #151625;
+  --light-blue: #2D2E47;
+}
 
 * {
   box-sizing: border-box;
 }
 
 h1 {
-  font-family: 'Roboto Condensed', serif;
+  font-family: var(--roboto-condensed);
   font-size: 10rem;
   font-weight: 700;
-  color: #ECEDF2;
+  color: var(--text-color);
   margin-bottom: 10px;
 }
 
 h2 {
-  font-family: 'Roboto', serif;
+  font-family: var(--roboto);
   font-size: 3rem;
   font-weight: 300;
-  color: #ECEDF2;
+  color: var(--text-color);
 }
 
 h3 {
-  font-family: 'Roboto Condensed', serif;
+  font-family: var(--roboto-condensed);
   font-size: 3rem;
   font-weight: 700;
-  color: #ECEDF2;
-  margin-bottom:30px;
-  margin-top: 30px;
+  color: var(--text-color);
+  line-height: 1.2;
+}
+
+h4 {
+  font-family: var(--roboto-condensed);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin-bottom: 30px;
 }
 
 p {
-  font-family:'Roboto', serif;;
-  color: #ECEDF2;
+  font-family: var(--roboto);
+  color: var(--text-color);
   font-weight: 300;
   font-size: 18px;
   line-height: 1.6;
 }
 
-.hero-background {
+/* hero-background */
+.dz-hero-background {
   background-image: url('https://media.giphy.com/media/bPz1w90N6bH7W/giphy.gif');
   background-size: cover;
   height: 100vh;
@@ -61,17 +69,25 @@ p {
   margin-top: 300px;
 }
 
-.info {
-  background-color: #151625;
+/* what-is-hiit */
+.dz-info {
+  background-color: var(--dark-blue);
   padding-top: 50px;
   padding-bottom: 50px;
+  position: relative;
 }
 
-.info-container {
-  margin-left: 100px;
-  margin-right: 100px;
-  background-color: #2D2E47;
+.dz-info-container {
+  margin-left: 140px;
+  margin-right: 140px;
+  background-color: var(--light-blue);
   padding: 50px;
+  flex-wrap: wrap;
+}
+
+.dz-what-is-title {
+  margin-bottom:30px;
+  margin-top: 30px;
 }
 
 #what-is-image {
@@ -79,8 +95,90 @@ p {
   margin-bottom: 30px;
 }
 
-.what-is-line {
+.dz-what-is-line {
   margin-top: 100px;
   height: 10px;
-  background-color: #C85658;
+  width: 170px;
+  position: absolute;
+  z-index: 2;
+  background-color: var(--accent-color);
 }
+
+.dz-hiit-info{
+  flex: 40%;
+  min-width:450px;
+  padding-right: 20px;
+}
+
+/* structure-of-a-hiit-session */
+.dz-structure {
+  background-color: var(--dark-blue);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.dz-structure-line {
+  margin-top: 93px;
+  height: 10px;
+  width: 300px;
+  position: absolute;
+  z-index: 2;
+  background-color: var(--accent-color);
+}
+
+.dz-structure-container {
+  margin-left: 250px;
+  margin-right: 250px;
+  background-color: var(--light-blue);
+  padding: 70px;
+  flex-wrap: wrap;
+}
+
+.dz-structure-info {
+  flex: 60%;
+  padding-right: 70px;
+}
+
+.dz-structure-details {
+  flex: 40%;
+}
+
+.dz-structure-title {
+  margin-bottom: 30px;
+}
+
+.dz-structure-level {
+  margin-top: 70px;
+}
+
+@media only screen and (max-width: 1200px) {
+  #structure-paragraph {
+    margin-bottom: 50px;
+  }
+}
+
+/* benefits-of-hiit */
+
+
+/* utility */
+.dz-layout-row{
+  display: flex;
+}
+
+.dz-flex-auto{
+  flex: auto;
+}
+
+.dz-flex-none{
+  flex: none;
+}
+
+/* @media only screen and (max-width: 600px) {
+  #what-is-image {
+    display: none;
+  }
+} */
+
+/* flex: 50%; */
+/* max-width: 600px; */

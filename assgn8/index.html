@@ -6,28 +6,45 @@
     <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:300,400&display=swap" rel="stylesheet">
     <!-- stylesheets -->
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="custom.css">
   </head>
   <body>
     <!-- hero background -->
-    <div class="hero-background">
+    <div class="dz-hero-background">
       <h1>HIIT</h1>
       <h2>High Intensity Interval Training</h2>
       <img src="images/scroll-icon.svg" id="scroll-icon">
     </div>
     <!-- info -->
-    <div class="info">
-      <div class="col-sm-1 col-lg-1 what-is-line float-left"></div>
-      <div class="info-container row">
-        <div class="col-sm-12 col-lg-6">
-          <h3>WHAT IS HIIT</h3>
+    <div class="dz-info dz-layout-row">
+      <div class="dz-what-is-line"></div>
+      <div class="dz-info-container dz-layout-row">
+        <div class="dz-hiit-info">
+          <h3 class="dz-what-is-title">WHAT IS HIIT</h3>
           <p>HIIT is a type of workout that involves brief bursts of intense effort broken up by a short rest or active recovery.<p></br>
           <p>A HIIT workout does mean that you're doing a cardio workout that includes short bursts of hard work, but the key is that during those bursts you're exerting yourself at almost max effort.</p>
         </div>
-        <div class="col-sm-12 col-lg-6">
-          <img src="images/what-is.png" class="img-fluid" id="what-is-image">
+        <img src="images/what-is.png" id="what-is-image">
+      </div>
+    </div>
+    <div class="dz-structure dz-layout-row">
+      <div class="dz-structure-line"></div>
+      <div class="dz-structure-container dz-layout-row">
+        <div class="dz-structure-info">
+          <h3 class="dz-structure-title">STRUCTURE OF A HIIT SESSION</h3>
+          <p id="structure-paragraph">Complete a circuit set of exercises 3 times, with rounds of work and rest depnding on your level.</p>
+        </div>
+        <div class="dz-structure-details">
+          <h4>BEGINNER</h4>
+          <p>30 seconds of work</p>
+          <p>30 seconds of rest</p>
+          <h4 class="dz-structure-level">INTERMEDIATE</h4>
+          <p>20 seconds of work</p>
+          <p>10 seconds of rest</p>
+          <h4 class="dz-structure-level">ADVANCED</h4>
+          <p>45 seconds of work</p>
+          <p>15 seconds of rest</p>
         </div>
       </div>
     </div>
