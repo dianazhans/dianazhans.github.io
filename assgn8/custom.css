@@ -224,8 +224,10 @@ p {
 }
 
 /* benefits-2 */
-.dz-benefits-2 {
-  margin-top: 50px;
+@media only screen and (min-width: 1200px) {
+  .dz-benefits-2 {
+    margin-top: 50px;
+  }
 }
 
 #benefits-2-image {
@@ -263,16 +265,18 @@ p {
 }
 
 .dz-exercise-section {
+  display: flex;
+  flex-wrap: wrap;
   margin-left: 80px;
   margin-right: 80px;
-  margin-bottom: 50px;
-  flex-wrap: wrap;
+  margin-bottom: 80px;
 }
 
 .dz-video {
   flex: 50%;
-  background-color: black;
-  min-width: 520px;
+  object-fit: cover;
+  min-width: 500px;
+  min-height: 500px;
 }
 
 .dz-exercise-details {
@@ -301,10 +305,15 @@ p {
   margin-bottom: 10px;
 }
 
-
-#test {
-  object-fit: cover;
+/* footer */
+.dz-footer {
+  background-color: var(--light-blue);
+  justify-content: center;
+  padding-top: 90px;
+  padding-bottom: 90px;
 }
+
+
 
 
 
