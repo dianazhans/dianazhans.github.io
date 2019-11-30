@@ -262,10 +262,6 @@ p {
   background-color: var(--accent-color);
 }
 
-/* .dz-exercises {
-  flex-wrap: wrap;
-} */
-
 .dz-exercise-section {
   margin-left: 80px;
   margin-right: 80px;
@@ -276,6 +272,7 @@ p {
 .dz-video {
   flex: 50%;
   background-color: black;
+  min-width: 520px;
 }
 
 .dz-exercise-details {
@@ -305,9 +302,9 @@ p {
 }
 
 
-
-
-
+#test {
+  object-fit: cover;
+}
 
 
 
