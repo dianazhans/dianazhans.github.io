@@ -219,10 +219,6 @@ p {
   flex: 50%;
 }
 
-.dz-benefits-details-1 {
-  margin-left: 20px;
-}
-
 .dz-benefits-info-1 p {
   margin-bottom: 50px;
 }
@@ -244,6 +240,68 @@ p {
 .dz-benefits-info-2 p {
   margin-bottom: 50px;
   margin-right: 40px;
+}
+
+/* exercises */
+.dz-exercises-header {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.dz-exercises-title {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.dz-exercises-line {
+  height: 10px;
+  width: 73px;
+  background-color: var(--accent-color);
+}
+
+/* .dz-exercises {
+  flex-wrap: wrap;
+} */
+
+.dz-exercise-section {
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.dz-video {
+  flex: 50%;
+  background-color: black;
+}
+
+.dz-exercise-details {
+  flex: 50%;
+  background-color: var(--light-blue);
+  padding: 50px;
+}
+
+.dz-exercise-name {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.dz-exercise-explanation {
+  margin-bottom: 20px;
+}
+
+.dz-exercise-number {
+  color: var(--accent-color);
+  margin-right: 10px;
+}
+
+.dz-exercise-steps {
+  margin-bottom: 10px;
 }
 
 
