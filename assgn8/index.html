@@ -8,17 +8,24 @@
     <!-- stylesheets -->
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="custom.css">
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <!-- javascript -->
     <script src="main.js" type="text/javascript" async></script>
+    <!-- animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="animations.css">
   </head>
   <body>
     <!-- hero background -->
     <div class="dz-hero-background">
-      <h1>HIIT</h1>
-      <h2>High Intensity Interval Training</h2>
-      <img src="images/scroll-icon.svg" id="scroll-icon">
+      <h1 class="fade-in-fwd">HIIT</h1>
+      <h2 class="fade-in-fwd">High Intensity Interval Training</h2>
+      <img class="animated bounceIn delay-1s" src="images/scroll-icon.svg" id="scroll-icon">
     </div>
-    <!-- info -->
+    <!-- back-to-top-button -->
     <button onclick="topFunction()" id="top-button"><p>Top</p></button>
+    <!-- info -->
     <div class="dz-info dz-layout-row">
       <div class="dz-what-is-line"></div>
       <div class="dz-info-container dz-layout-row">
@@ -318,7 +325,69 @@
     </div>
     <!-- footer -->
     <div class="dz-layout-row dz-footer">
-      <h3>GO! WHAT ARE YOU WAITING FOR?</h3>
+      <h3 id="footer-message">GO! WHAT ARE YOU WAITING FOR?</h3>
     </div>
+
+    <!-- animations -->
+    <script>
+    	$(window).scroll(function() {
+    		$('.dz-what-is-line').each(function(){
+    		var imagePos = $(this).offset().top;
+
+    		var topOfWindow = $(window).scrollTop();
+    			if (imagePos < topOfWindow+800) {
+    				$(this).addClass("slideRight");
+    			}
+    		});
+    	});
+    </script>
+    <script>
+      $(window).scroll(function() {
+        $('.dz-structure-line').each(function(){
+        var imagePos = $(this).offset().top;
+
+        var topOfWindow = $(window).scrollTop();
+          if (imagePos < topOfWindow+800) {
+            $(this).addClass("slideRight");
+          }
+        });
+      });
+    </script>
+    <script>
+      $(window).scroll(function() {
+        $('.dz-benefits-line').each(function(){
+        var imagePos = $(this).offset().top;
+
+        var topOfWindow = $(window).scrollTop();
+          if (imagePos < topOfWindow+800) {
+            $(this).addClass("slideRight");
+          }
+        });
+      });
+    </script>
+    <script>
+      $(window).scroll(function() {
+        $('.dz-exercises-line').each(function(){
+        var imagePos = $(this).offset().top;
+
+        var topOfWindow = $(window).scrollTop();
+          if (imagePos < topOfWindow+600) {
+            $(this).addClass("slideDown");
+          }
+        });
+      });
+    </script>
+    <script>
+      $(window).scroll(function() {
+        $('#footer-message').each(function(){
+        var imagePos = $(this).offset().top;
+
+        var topOfWindow = $(window).scrollTop();
+          if (imagePos < topOfWindow+800) {
+            $(this).addClass("expandOpen");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
