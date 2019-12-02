@@ -22,7 +22,7 @@ h1 {
 
 h2 {
   font-family: var(--roboto);
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 300;
   color: var(--text-color);
 }
@@ -67,6 +67,26 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.dz-hero-background::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(120deg, #000000, #000000);
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.dz-hero-background > * {
+  z-index: 100;
+}
+
+#hiit-title {
+  margin-bottom: 40px;
 }
 
 #scroll-icon {
