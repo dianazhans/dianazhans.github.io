@@ -1,4 +1,4 @@
-//Back to top button//
+// //Back to top button//
 //Get the button:
 mybutton = document.getElementById("top-button");
 
@@ -63,7 +63,7 @@ tl7.from(".dz-benefits-01", .5, {x:200, opacity: 0});
 tl8.from(".dz-benefits-02", .5, {x:200, opacity: 0});
 tl9.from(".dz-benefits-03", .5, {x:200, opacity: 0});
 tl10.from(".dz-benefits-04", .5, {x:200, opacity: 0});
-
+//
 tl11.from(".dz-benefits-2-image", .5, {x:-200, opacity: 0});
 tl12.from(".dz-benefits-05", .5, {x:200, opacity: 0});
 tl13.from(".dz-benefits-06", .5, {x:200, opacity: 0});
