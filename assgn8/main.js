@@ -25,7 +25,9 @@ var tl2 = new TimelineMax({onUpdate: updatePercentage}); //structure line//
 var tl3 = new TimelineMax({onUpdate: updatePercentage}); //benefits line//
 var tl4 = new TimelineMax({onUpdate: updatePercentage}); //exercises line//
 var tl5 = new TimelineMax({onUpdate: updatePercentage}); //footer message//
-//benefits animations//
+
+var tl7 = new TimelineMax({onUpdate: updatePercentage}); //benefits-01//
+
 var tl16 = new TimelineMax({onUpdate: updatePercentage}); //what-is image//
 var tl17 = new TimelineMax({onUpdate: updatePercentage}); //push-up//
 var tl18 = new TimelineMax({onUpdate: updatePercentage}); //lunge//
@@ -50,6 +52,8 @@ tl4.from(".dz-exercises-line", .5, {y:100, opacity: 0});
 tl5.from("#footer-message", .5, {scale:1.3, opacity: 0}, "=.2");
 
 //benefits animations//
+// tl6.from(".dz-benefits-1-image", .5, {x:-200, opacity:0});
+tl7.from(".dz-benefits-01", .5, {x:-200, opacity: 0});
 
 tl16.from(".dz-what-is-image", .5, {x:200, opacity: 0});
 
@@ -95,8 +99,13 @@ const scene5 = new ScrollMagic.Scene({
 })
     .setTween(tl5)
       .addTo(controller);
-      
-//benefits animations//
+
+const scene7 = new ScrollMagic.Scene({
+    triggerElement: ".dz-benefits-01",
+    triggerHook: "onEnter"
+})
+    .setTween(tl7)
+      .addTo(controller);
 
 const scene16 = new ScrollMagic.Scene({
     triggerElement: ".dz-what-is-image",
