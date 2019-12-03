@@ -25,16 +25,16 @@ var tl2 = new TimelineMax({onUpdate: updatePercentage}); //structure line//
 var tl3 = new TimelineMax({onUpdate: updatePercentage}); //benefits line//
 var tl4 = new TimelineMax({onUpdate: updatePercentage}); //exercises line//
 var tl5 = new TimelineMax({onUpdate: updatePercentage}); //footer message//
-var tl6 = new TimelineMax({onUpdate: updatePercentage}); //benefits-1-image//
-var tl7 = new TimelineMax({onUpdate: updatePercentage}); //benfits details (first half)//
-var tl8 = new TimelineMax({onUpdate: updatePercentage});
-var tl9 = new TimelineMax({onUpdate: updatePercentage});
-var tl10 = new TimelineMax({onUpdate: updatePercentage});
-var tl11 = new TimelineMax({onUpdate: updatePercentage}); //benefits-2-image//
-var tl12 = new TimelineMax({onUpdate: updatePercentage}); //benefits details (second half)//
-var tl13 = new TimelineMax({onUpdate: updatePercentage});
-var tl14 = new TimelineMax({onUpdate: updatePercentage});
-var tl15 = new TimelineMax({onUpdate: updatePercentage});
+// var tl6 = new TimelineMax({onUpdate: updatePercentage}); //benefits-1-image//
+// var tl7 = new TimelineMax({onUpdate: updatePercentage}); //benfits details (first half)//
+// var tl8 = new TimelineMax({onUpdate: updatePercentage});
+// var tl9 = new TimelineMax({onUpdate: updatePercentage});
+// var tl10 = new TimelineMax({onUpdate: updatePercentage});
+// var tl11 = new TimelineMax({onUpdate: updatePercentage}); //benefits-2-image//
+// var tl12 = new TimelineMax({onUpdate: updatePercentage}); //benefits details (second half)//
+// var tl13 = new TimelineMax({onUpdate: updatePercentage});
+// var tl14 = new TimelineMax({onUpdate: updatePercentage});
+// var tl15 = new TimelineMax({onUpdate: updatePercentage});
 var tl16 = new TimelineMax({onUpdate: updatePercentage}); //what-is image//
 var tl17 = new TimelineMax({onUpdate: updatePercentage}); //push-up//
 var tl18 = new TimelineMax({onUpdate: updatePercentage}); //lunge//
@@ -58,17 +58,17 @@ tl4.from(".dz-exercises-line", .5, {y:100, opacity: 0});
 
 tl5.from("#footer-message", .5, {scale:1.3, opacity: 0}, "=.2");
 
-tl6.from(".dz-benefits-1-image", .5, {x:-200, opacity: 0});
-tl7.from(".dz-benefits-01", .5, {x:200, opacity: 0});
-tl8.from(".dz-benefits-02", .5, {x:200, opacity: 0});
-tl9.from(".dz-benefits-03", .5, {x:200, opacity: 0});
-tl10.from(".dz-benefits-04", .5, {x:200, opacity: 0});
-//
-tl11.from(".dz-benefits-2-image", .5, {x:-200, opacity: 0});
-tl12.from(".dz-benefits-05", .5, {x:200, opacity: 0});
-tl13.from(".dz-benefits-06", .5, {x:200, opacity: 0});
-tl14.from(".dz-benefits-07", .5, {x:200, opacity: 0});
-tl15.from(".dz-benefits-08", .5, {x:200, opacity: 0});
+// tl6.from(".dz-benefits-1-image", .5, {x:-200, opacity: 0});
+// tl7.from(".dz-benefits-01", .5, {x:200, opacity: 0});
+// tl8.from(".dz-benefits-02", .5, {x:200, opacity: 0});
+// tl9.from(".dz-benefits-03", .5, {x:200, opacity: 0});
+// tl10.from(".dz-benefits-04", .5, {x:200, opacity: 0});
+// //
+// tl11.from(".dz-benefits-2-image", .5, {x:-200, opacity: 0});
+// tl12.from(".dz-benefits-05", .5, {x:200, opacity: 0});
+// tl13.from(".dz-benefits-06", .5, {x:200, opacity: 0});
+// tl14.from(".dz-benefits-07", .5, {x:200, opacity: 0});
+// tl15.from(".dz-benefits-08", .5, {x:200, opacity: 0});
 
 tl16.from(".dz-what-is-image", .5, {x:200, opacity: 0});
 
@@ -115,75 +115,75 @@ const scene5 = new ScrollMagic.Scene({
     .setTween(tl5)
       .addTo(controller);
 
-const scene6 = new ScrollMagic.Scene({ //benefits-01-image//
-    triggerElement: ".dz-benefits",
-    triggerHook: "40%"
-})
-    .setTween(tl6)
-      .addTo(controller);
-
-const scene7 = new ScrollMagic.Scene({
-    triggerElement: ".dz-benefits-01",
-    triggerHook: "onEnter"
-})
-    .setTween(tl7)
-      .addTo(controller);
-
-const scene8 = new ScrollMagic.Scene({
-    triggerElement: ".dz-benefits-02",
-    triggerHook: "onEnter"
-})
-    .setTween(tl8)
-      .addTo(controller);
-
-const scene9 = new ScrollMagic.Scene({
-    triggerElement: ".dz-benefits-03",
-    triggerHook: "onEnter"
-})
-    .setTween(tl9)
-      .addTo(controller);
-
-const scene10 = new ScrollMagic.Scene({
-    triggerElement: ".dz-benefits-04",
-    triggerHook: "onEnter"
-})
-    .setTween(tl10)
-      .addTo(controller);
-
-const scene11 = new ScrollMagic.Scene({ //benefits-02-image//
-    triggerElement: ".dz-benefits-2-image",
-    triggerHook: "40%"
-})
-    .setTween(tl11)
-      .addTo(controller);
-
-const scene12 = new ScrollMagic.Scene({
-    triggerElement: ".dz-benefits-05",
-    triggerHook: "onEnter"
-})
-    .setTween(tl12)
-      .addTo(controller);
-
-const scene13 = new ScrollMagic.Scene({
-    triggerElement: ".dz-benefits-06",
-    triggerHook: "onEnter"
-})
-    .setTween(tl13)
-      .addTo(controller);
-
-const scene14 = new ScrollMagic.Scene({
-    triggerElement: ".dz-benefits-07",
-    triggerHook: "onEnter"
-})
-    .setTween(tl14)
-      .addTo(controller);
-
-const scene15 = new ScrollMagic.Scene({
-    triggerElement: ".dz-benefits-08",
-    triggerHook: "onEnter"
-})
-    .setTween(tl15)
-      .addTo(controller);
+// const scene6 = new ScrollMagic.Scene({ //benefits-01-image//
+//     triggerElement: ".dz-benefits",
+//     triggerHook: "40%"
+// })
+//     .setTween(tl6)
+//       .addTo(controller);
+//
+// const scene7 = new ScrollMagic.Scene({
+//     triggerElement: ".dz-benefits-01",
+//     triggerHook: "onEnter"
+// })
+//     .setTween(tl7)
+//       .addTo(controller);
+//
+// const scene8 = new ScrollMagic.Scene({
+//     triggerElement: ".dz-benefits-02",
+//     triggerHook: "onEnter"
+// })
+//     .setTween(tl8)
+//       .addTo(controller);
+//
+// const scene9 = new ScrollMagic.Scene({
+//     triggerElement: ".dz-benefits-03",
+//     triggerHook: "onEnter"
+// })
+//     .setTween(tl9)
+//       .addTo(controller);
+//
+// const scene10 = new ScrollMagic.Scene({
+//     triggerElement: ".dz-benefits-04",
+//     triggerHook: "onEnter"
+// })
+//     .setTween(tl10)
+//       .addTo(controller);
+//
+// const scene11 = new ScrollMagic.Scene({ //benefits-02-image//
+//     triggerElement: ".dz-benefits-2-image",
+//     triggerHook: "40%"
+// })
+//     .setTween(tl11)
+//       .addTo(controller);
+//
+// const scene12 = new ScrollMagic.Scene({
+//     triggerElement: ".dz-benefits-05",
+//     triggerHook: "onEnter"
+// })
+//     .setTween(tl12)
+//       .addTo(controller);
+//
+// const scene13 = new ScrollMagic.Scene({
+//     triggerElement: ".dz-benefits-06",
+//     triggerHook: "onEnter"
+// })
+//     .setTween(tl13)
+//       .addTo(controller);
+//
+// const scene14 = new ScrollMagic.Scene({
+//     triggerElement: ".dz-benefits-07",
+//     triggerHook: "onEnter"
+// })
+//     .setTween(tl14)
+//       .addTo(controller);
+//
+// const scene15 = new ScrollMagic.Scene({
+//     triggerElement: ".dz-benefits-08",
+//     triggerHook: "onEnter"
+// })
+//     .setTween(tl15)
+//       .addTo(controller);
 
 const scene16 = new ScrollMagic.Scene({
     triggerElement: ".dz-what-is-image",
