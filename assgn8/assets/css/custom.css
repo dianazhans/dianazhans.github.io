@@ -1,4 +1,4 @@
-/*hero background*/
+/* global css */
 :root {
   --text-color: #ECEDF2;
   --accent-color: #C85658;
@@ -69,7 +69,7 @@ html {
   justify-content: center;
 }
 
-.dz-hero-background::after {
+.dz-hero-background::after { /* adds a dark overlay to the hero background */
   content: "";
   position: absolute;
   top: 0;
@@ -94,7 +94,7 @@ html {
   margin-top: 300px;
 }
 
-/* back-to-top-button */
+/* back-to-top button */
 #top-button {
   display: none;
   position: fixed;
@@ -116,7 +116,7 @@ html {
   opacity: 0.8;
 }
 
-/* what-is-hiit */
+/* section: what is HIIT */
 .dz-info {
   background-color: var(--dark-blue);
   padding-top: 50px;
@@ -157,7 +157,7 @@ html {
   padding-right: 20px;
 }
 
-/* structure-of-a-hiit-session */
+/* section: structure of a HIIT session */
 .dz-structure {
   background-color: var(--dark-blue);
   padding-top: 50px;
@@ -199,13 +199,13 @@ html {
   margin-top: 70px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) { /* adds space after paragraph in smaller viewports */
   #structure-paragraph {
     margin-bottom: 50px;
   }
 }
 
-/* benefits-of-hiit */
+/* section: benefits of HIIT */
 .dz-benefits {
   background-color: var(--dark-blue);
   padding-top: 50px;
@@ -247,7 +247,7 @@ html {
   margin-bottom: 10px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1200px) { /* hides images in smaller viewports */
   .dz-benefits-1-image {
     display: none;
   }
@@ -256,7 +256,7 @@ html {
   }
 }
 
-/* benefits-1 */
+/* benefits-1 (first half of benefits) */
 .dz-benefits-1-image {
   object-fit: cover;
   margin-right: 50px;
@@ -270,8 +270,8 @@ html {
   margin-bottom: 50px;
 }
 
-/* benefits-2 */
-@media only screen and (min-width: 1200px) {
+/* benefits-2 (second half of benefits) */
+@media only screen and (min-width: 1200px) { /* corrects spacing after second half in smaller viewports */ 
   .dz-benefits-2 {
     margin-top: 50px;
   }

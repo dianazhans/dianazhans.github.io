@@ -1,8 +1,9 @@
-// //Back to top button//
+//back-to-top button//
+//resource: https://www.w3schools.com/howto/howto_js_scroll_to_top.asp//
 //Get the button:
 mybutton = document.getElementById("top-button");
 
-// When the user scrolls down 800px from the top of the document, show the button
+// When the user scrolls down 500px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -20,33 +21,38 @@ function topFunction() {
 }
 
 //ScrollMagic animations//
-//section lines//
+//setting variables for each section's lines//
 var tl = new TimelineMax({onUpdate: updatePercentage}); //what-is line//
-var tl2 = new TimelineMax({onUpdate: updatePercentage}); //structure line//
-var tl3 = new TimelineMax({onUpdate: updatePercentage}); //benefits line//
-var tl4 = new TimelineMax({onUpdate: updatePercentage}); //exercises line//
-var tl5 = new TimelineMax({onUpdate: updatePercentage}); //footer message//
-//benefits//
-var tl6 = new TimelineMax({onUpdate: updatePercentage}); //benefits-01//
-var tl7 = new TimelineMax({onUpdate: updatePercentage}); //benefits-02//
-var tl8 = new TimelineMax({onUpdate: updatePercentage}); //benefits-03//
-var tl9 = new TimelineMax({onUpdate: updatePercentage}); //benefits-04//
-var tl10 = new TimelineMax({onUpdate: updatePercentage}); //benefits-05//
-var tl11 = new TimelineMax({onUpdate: updatePercentage}); //benefits-06//
-var tl12 = new TimelineMax({onUpdate: updatePercentage}); //benefits-07//
-var tl13 = new TimelineMax({onUpdate: updatePercentage}); //benefits-08//
-//what-is-image//
-var tl16 = new TimelineMax({onUpdate: updatePercentage}); //what-is image//
-//exercises//
-var tl17 = new TimelineMax({onUpdate: updatePercentage}); //push-up//
-var tl18 = new TimelineMax({onUpdate: updatePercentage}); //lunge//
-var tl19 = new TimelineMax({onUpdate: updatePercentage}); //step-up//
-var tl20 = new TimelineMax({onUpdate: updatePercentage}); //tricep-dips//
-var tl21 = new TimelineMax({onUpdate: updatePercentage}); //squat-jump//
-var tl22 = new TimelineMax({onUpdate: updatePercentage}); //high-knees//
-var tl23 = new TimelineMax({onUpdate: updatePercentage}); //burpee//
+var tl2 = new TimelineMax(); //structure line//
+var tl3 = new TimelineMax(); //benefits line//
+var tl4 = new TimelineMax(); //exercises line//
+//setting a variable for the footer message//
+var tl5 = new TimelineMax(); //footer message//
+//setting variables for each benefit//
+var tl6 = new TimelineMax(); //benefits-01//
+var tl7 = new TimelineMax(); //benefits-02//
+var tl8 = new TimelineMax(); //benefits-03//
+var tl9 = new TimelineMax(); //benefits-04//
+var tl10 = new TimelineMax(); //benefits-05//
+var tl11 = new TimelineMax(); //benefits-06//
+var tl12 = new TimelineMax(); //benefits-07//
+var tl13 = new TimelineMax(); //benefits-08//
+//setting a variable for the .what-is-image//
+var tl14 = new TimelineMax(); //what-is image//
+//setting variables for each exercise//
+var tl15 = new TimelineMax(); //push-up//
+var tl16 = new TimelineMax(); //lunge//
+var tl17 = new TimelineMax(); //step-up//
+var tl18 = new TimelineMax(); //tricep-dips//
+var tl19 = new TimelineMax(); //squat-jump//
+var tl20 = new TimelineMax(); //high-knees//
+var tl21 = new TimelineMax(); //burpee//
+
+//setting up a ScrollMagic controller//
 const controller = new ScrollMagic.Controller();
 
+//creating the animations for each variable//
+//sections' lines//
 tl.from(".dz-what-is-line", .5, {x:-200, opacity: 0});
 
 tl2.from(".dz-structure-line", .5, {x:-200, opacity: 0});
@@ -58,9 +64,10 @@ tl3.from(".dz-benefits-line", .5, {x:-200, opacity: 0});
 
 tl4.from(".dz-exercises-line", .5, {y:100, opacity: 0});
 
+//footer message//
 tl5.from("#footer-message", .5, {scale:1.3, opacity: 0}, "=.2");
 
-//benefits animations//
+//benefits//
 tl6.from(".dz-benefits-01", .5, {x:-200, opacity: 0});
 tl7.from(".dz-benefits-02", .5, {x:-200, opacity: 0});
 tl8.from(".dz-benefits-03", .5, {x:-200, opacity: 0});
@@ -70,16 +77,19 @@ tl11.from(".dz-benefits-06", .5, {x:-200, opacity: 0});
 tl12.from(".dz-benefits-07", .5, {x:-200, opacity: 0});
 tl13.from(".dz-benefits-08", .5, {x:-200, opacity: 0});
 
-tl16.from(".dz-what-is-image", .5, {x:200, opacity: 0});
+//what-is-image//
+tl14.from(".dz-what-is-image", .5, {x:200, opacity: 0});
 
-tl17.from(".dz-push-up", .5, {y:200, opacity: 0});
-tl18.from(".dz-lunge", .5, {y:200, opacity: 0});
-tl19.from(".dz-step-up", .5, {y:200, opacity: 0});
-tl20.from(".dz-tricep-dips", .5, {y:200, opacity: 0});
-tl21.from(".dz-squat-jump", .5, {y:200, opacity: 0});
-tl22.from(".dz-high-knees", .5, {y:200, opacity: 0});
-tl23.from(".dz-burpee", .5, {y:200, opacity: 0});
+//exercises//
+tl15.from(".dz-push-up", .5, {y:200, opacity: 0});
+tl16.from(".dz-lunge", .5, {y:200, opacity: 0});
+tl17.from(".dz-step-up", .5, {y:200, opacity: 0});
+tl18.from(".dz-tricep-dips", .5, {y:200, opacity: 0});
+tl19.from(".dz-squat-jump", .5, {y:200, opacity: 0});
+tl20.from(".dz-high-knees", .5, {y:200, opacity: 0});
+tl21.from(".dz-burpee", .5, {y:200, opacity: 0});
 
+//setting when each animation will be triggered, duration and
 const scene = new ScrollMagic.Scene({
   triggerElement: ".dz-info",
   triggerHook: "10%"
@@ -175,56 +185,56 @@ const scene16 = new ScrollMagic.Scene({
     triggerElement: ".dz-what-is-image",
     triggerHook: "10%"
 })
-    .setTween(tl16)
+    .setTween(tl14)
       .addTo(controller);
 
 const scene17 = new ScrollMagic.Scene({
     triggerElement: ".dz-push-up",
     triggerHook: "onEnter"
 })
-    .setTween(tl17)
+    .setTween(tl15)
       .addTo(controller);
 
 const scene18 = new ScrollMagic.Scene({
     triggerElement: ".dz-lunge",
     triggerHook: "onEnter"
 })
-    .setTween(tl18)
+    .setTween(tl16)
       .addTo(controller);
 
 const scene19 = new ScrollMagic.Scene({
     triggerElement: ".dz-step-up",
     triggerHook: "onEnter"
 })
-    .setTween(tl19)
+    .setTween(tl17)
       .addTo(controller);
 
 const scene20 = new ScrollMagic.Scene({
     triggerElement: ".dz-tricep-dips",
     triggerHook: "onEnter"
 })
-    .setTween(tl20)
+    .setTween(tl18)
       .addTo(controller);
 
 const scene21 = new ScrollMagic.Scene({
     triggerElement: ".dz-squat-jump",
     triggerHook: "onEnter"
 })
-    .setTween(tl21)
+    .setTween(tl19)
       .addTo(controller);
 
 const scene22 = new ScrollMagic.Scene({
     triggerElement: ".dz-high-knees",
     triggerHook: "onEnter"
 })
-    .setTween(tl22)
+    .setTween(tl20)
       .addTo(controller);
 
 const scene23 = new ScrollMagic.Scene({
     triggerElement: ".dz-burpee",
     triggerHook: "onEnter"
 })
-    .setTween(tl23)
+    .setTween(tl21)
       .addTo(controller);
 
 function updatePercentage() {
