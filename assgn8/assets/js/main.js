@@ -20,12 +20,13 @@ function topFunction() {
 }
 
 //ScrollMagic animations//
+//section lines//
 var tl = new TimelineMax({onUpdate: updatePercentage}); //what-is line//
 var tl2 = new TimelineMax({onUpdate: updatePercentage}); //structure line//
 var tl3 = new TimelineMax({onUpdate: updatePercentage}); //benefits line//
 var tl4 = new TimelineMax({onUpdate: updatePercentage}); //exercises line//
 var tl5 = new TimelineMax({onUpdate: updatePercentage}); //footer message//
-
+//benefits//
 var tl6 = new TimelineMax({onUpdate: updatePercentage}); //benefits-01//
 var tl7 = new TimelineMax({onUpdate: updatePercentage}); //benefits-02//
 var tl8 = new TimelineMax({onUpdate: updatePercentage}); //benefits-03//
@@ -34,9 +35,9 @@ var tl10 = new TimelineMax({onUpdate: updatePercentage}); //benefits-05//
 var tl11 = new TimelineMax({onUpdate: updatePercentage}); //benefits-06//
 var tl12 = new TimelineMax({onUpdate: updatePercentage}); //benefits-07//
 var tl13 = new TimelineMax({onUpdate: updatePercentage}); //benefits-08//
-var tl14 = new TimelineMax({onUpdate: updatePercentage}); //benefits-image-1//
-
+//what-is-image//
 var tl16 = new TimelineMax({onUpdate: updatePercentage}); //what-is image//
+//exercises//
 var tl17 = new TimelineMax({onUpdate: updatePercentage}); //push-up//
 var tl18 = new TimelineMax({onUpdate: updatePercentage}); //lunge//
 var tl19 = new TimelineMax({onUpdate: updatePercentage}); //step-up//
@@ -68,8 +69,6 @@ tl10.from(".dz-benefits-05", .5, {x:-200, opacity: 0});
 tl11.from(".dz-benefits-06", .5, {x:-200, opacity: 0});
 tl12.from(".dz-benefits-07", .5, {x:-200, opacity: 0});
 tl13.from(".dz-benefits-08", .5, {x:-200, opacity: 0});
-
-tl14.from(".dz-benefits-1-image", .5, {x:-200, opacity:0});
 
 tl16.from(".dz-what-is-image", .5, {x:200, opacity: 0});
 
@@ -171,14 +170,6 @@ const scene13 = new ScrollMagic.Scene({
 })
     .setTween(tl13)
       .addTo(controller);
-
-const scene14 = new ScrollMagic.Scene({
-    triggerElement: ".dz-benefits-1-image",
-    triggerHook: "onEnter"
-})
-    .setTween(tl14)
-      .addTo(controller);
-
 
 const scene16 = new ScrollMagic.Scene({
     triggerElement: ".dz-what-is-image",
